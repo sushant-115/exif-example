@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXIF data</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Image File Path</th>
+            <th>GPS Position Latitude</th>
+            <th>GPS Position Longitude</th>
+        </tr>
+        {{ range .}}
+            <tr>
+                <td>{{ .FilePath }}</td>
+                <td>{{ .Longitude }}</td>
+                <td>{{ .Latitude }}</td>
+            </tr>
+        {{ end}}
+    </table>
+</body>
+</html>
